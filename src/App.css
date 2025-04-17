@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   font-family: "urbanist";
+  background-color: #1a1a1a;
 }
 
 p,
@@ -15,6 +16,8 @@ a,
 button {
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
+  color: white;
+ 
 }
 
 li {
@@ -32,6 +35,7 @@ a {
 
 button {
   cursor: pointer;
+  background-color: #2e86c1;
 }
 
 header {
@@ -41,10 +45,23 @@ header {
   width: 100%;
 }
 
+
+
 .container {
   max-width: 132rem;
   margin: auto;
+  
+  
+}
+
+.header-container {
   height: 10rem;
+}
+
+.hero-section .container {
+  background-color: #1a1a1a;
+  color: white !important;
+  padding: 3.2rem !important;
 }
 
 .grid {
@@ -69,8 +86,115 @@ nav ul {
   display: none;
 }
 
+
+.app-background {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.hero-section {
+  height: 60vh;
+  background-color: #1a1a1a;
+  padding: 3.2rem;
+}
+
+.banner-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.banner-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  max-width: 20rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1.5rem;
+}
+
+.footer-section {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.footer-contact {
+  background-color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 2.4rem;
+  color: #90caf9;
+}
+
+.footer-contact-text p {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* Navbar - CSS changes */
+.menu-web {
+  display: flex;
+}
+
+.menu-mobile {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  background-color: #2a2a2a;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px;
+}
+
+.menu-mobile ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
 /* media queries  */
 @media screen and (max-width: 998px) {
+  .banner-column {
+    flex-direction: column;
+  }
+
+  .banner-inner {
+    order: 1;
+  }
+
+  .banner-image {
+    width: 80%;
+    order: 0;
+  }
   .menu-web {
     display: none;
   }
